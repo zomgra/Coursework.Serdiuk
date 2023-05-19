@@ -3,6 +3,7 @@ using Group = Coursework.CLI.Data.Group;
 
 namespace Coursework.CLI
 {
+    // Клас для опрацювання та парсингу сайту з розкладом
     public class Generator
     {
         private readonly HttpClient _client;

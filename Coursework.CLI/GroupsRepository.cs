@@ -1,9 +1,12 @@
-﻿using Coursework.CLI.Data;
+﻿using Coursework.CLI.Common;
+using Coursework.CLI.Data;
 
 namespace Coursework.CLI
 {
+    // Класс для збереження дат та груп і роботи з ними
     public class GroupsRepository
     {
+
         public List<Group> Groups { get; set; } = new List<Group>();
         public List<string> Dates { get; set; } = new List<string>();
 
@@ -18,7 +21,7 @@ namespace Coursework.CLI
         {
             foreach (var group in Groups)
             {
-                group.GetAllData();
+                group.PrintFullData();
             }
         }
     }

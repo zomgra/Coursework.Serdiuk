@@ -1,5 +1,6 @@
 ﻿namespace Coursework.CLI.Data
 {
+    // Клас для роботи з групою
     public class Group
     {
         public string Number { get; set; } = string.Empty;
@@ -18,13 +19,16 @@
                 Console.WriteLine($"Клас для групи: {Room}");
             Console.WriteLine("----------------------");
         }
-        public void GetAllData()
+        public void PrintFullData()
         {
             Console.WriteLine("----------------------");
             Console.WriteLine($"Група: №{Number}");
-            Console.WriteLine($"Пари групи: {string.Join(", ", Lessons)}");
-            Console.WriteLine($"Вчителя: {string.Join(", ", Teachers)}");
+            if (Lessons.Any())
+                Console.WriteLine($"Пари групи: {string.Join(", ", Lessons)}");
+            if (Teachers.Any())
+                Console.WriteLine($"Вчителя: {string.Join(", ", Teachers)}");
             if (!string.IsNullOrWhiteSpace(Room))
+                if (!string.IsNullOrWhiteSpace(Room))
                 Console.WriteLine($"Клас для групи: {Room}");
             Console.WriteLine("----------------------");
             Console.WriteLine();
